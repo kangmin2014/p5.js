@@ -1,56 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
   <title>My p5.js Portfolio</title>
-
-  <!-- p5.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
-
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+    }
+    .project {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+      transition: 0.2s;
+    }
+    .project:hover {
+      transform: scale(1.02);
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <h1>My p5.js Portfolio</h1>
-    <p>과제 1 ~ 4 — 왼쪽 위: 과제1, 오른쪽 위: 과제4, 왼쪽 아래: 과제2, 오른쪽 아래: 과제3</p>
-  </header>
 
-  <main class="grid">
-    <!-- 캔버스가 들어갈 컨테이너들 -->
-    <section id="panel1" class="panel">
-      <h2>과제 1</h2>
-      <div id="sketch1" class="canvas-container"></div>
-      <p class="desc">간단한 설명이나 사용법을 여기에 적을 수 있습니다.</p>
-    </section>
+  <h1>My p5.js Portfolio</h1>
 
-    <section id="panel4" class="panel">
-      <h2>과제 4</h2>
-      <div id="sketch4" class="canvas-container"></div>
-      <p class="desc">과제4 설명</p>
-    </section>
+  <div class="project-grid">
+    <a href="project1/" class="project">
+      <h2>Project 1</h2>
+      <p>과제 1</p>
+    </a>
 
-    <section id="panel2" class="panel">
-      <h2>과제 2</h2>
-      <div id="sketch2" class="canvas-container"></div>
-      <p class="desc">과제2 설명</p>
-    </section>
+    <a href="project4/" class="project">
+      <h2>Project 4</h2>
+      <p>과제 4</p>
+    </a>
 
-    <section id="panel3" class="panel">
-      <h2>과제 3</h2>
-      <div id="sketch3" class="canvas-container"></div>
-      <p class="desc">과제3 설명</p>
-    </section>
-  </main>
+    <a href="project2/" class="project">
+      <h2>Project 2</h2>
+      <p>과제 2</p>
+    </a>
 
-  <footer class="site-footer">
-    <p>Github Pages로 호스팅 — 제출용 URL을 LMS에 제출하세요.</p>
-  </footer>
+    <a href="project3/" class="project">
+      <h2>Project 3</h2>
+      <p>과제 3</p>
+    </a>
+  </div>
 
-  <!-- 네 개의 sketch 파일을 instance mode로 불러옵니다 -->
-  <script src="sketches/sketch1.js"></script>
-  <script src="sketches/sketch2.js"></script>
-  <script src="sketches/sketch3.js"></script>
-  <script src="sketches/sketch4.js"></script>
 </body>
 </html>
