@@ -1,0 +1,65 @@
+:root{
+  --gap: 18px;
+  --panel-bg: #0f1724;
+  --panel-fg: #e6eef8;
+  --accent: #7dd3fc;
+  --radius: 10px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Helvetica", Arial;
+  background: linear-gradient(180deg,#071024 0%, #07162a 100%);
+  color: var(--panel-fg);
+  padding: 24px;
+  min-height:100vh;
+}
+
+.site-header{margin-bottom:16px;text-align:center}
+.site-header h1{font-size:clamp(20px, 3.5vw, 34px); margin-bottom:6px}
+.site-header p{color: #9fb2c9; font-size:14px}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(280px, auto);
+  gap:var(--gap);
+}
+
+/* 패널 스타일 */
+.panel{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:12px;
+  border:1px solid rgba(255,255,255,0.04);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.panel h2{font-size:16px;color:var(--accent)}
+.canvas-container{
+  flex:1 1 auto;
+  border-radius:8px;
+  overflow:hidden;
+  background:#051020;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* 캔버스 크기 자동 적응 (p5 인스턴스에서 부모 크기 사용) */
+.canvas-container canvas{
+  display:block;
+  width:100% !important;
+  height:100% !important;
+}
+
+/* 설명, footer */
+.desc{color:#9fb2c9;font-size:13px}
+.site-footer{margin-top:16px;text-align:center;color:#8ea7be;font-size:13px}
+
+/* 모바일에서 한 열로 쌓기 */
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+}
