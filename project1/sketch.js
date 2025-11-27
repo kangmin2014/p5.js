@@ -2,7 +2,7 @@ function setup() {
   createCanvas(600, 400);
   colorMode(HSB, 360, 100, 100);
   noStroke();
-}
+} 
 
 function draw() {
   background(50, 30, 30);
