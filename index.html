@@ -14,9 +14,12 @@
     }
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr; /* 🔥 1열로 변경 */
       gap: 25px;
       margin-top: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .project {
       background: white;
